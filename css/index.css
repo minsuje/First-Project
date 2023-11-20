@@ -1,0 +1,334 @@
+main {
+    font-family: 'Noto Sans KR', sans-serif;
+    /* font-weight: 500; */
+    color: #64220B;
+}
+
+p {
+    color: #64220B;
+}
+
+h3 {
+    font-weight: 700;
+}
+a {
+    text-decoration: none;
+}
+
+.card {
+    border: none;
+
+    /* cursor: pointer; */
+}
+.card-img-overlay {
+    padding: 0;
+    margin-left: 100px;
+}
+
+.card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+.best img,
+.watch img,
+.recommend img,
+.bookmark img {
+    border-radius: 2%;
+}
+
+/* card hover */
+.best .card {
+    transition-property: bottom;
+    /* transition-duration: 1000s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 10s; */
+}
+
+.best .card:hover {
+    bottom: 2vh;
+}
+
+/* .bookmark .card-img {
+    margin-top: 2vh;
+} */
+/* .bookmark .card:hover {
+    bottom: 2vh;
+} */
+.recommend .card:hover {
+    bottom: 2vh;
+}
+
+/* 북마크 아이콘 */
+.best .bi,
+.recommend .bi,
+.bookmark .bi {
+    position: absolute;
+    right: 20%;
+    top: 2%;
+    /* margin-right: 10%; */
+    color: #907761;
+    font-size: 200%;
+}
+
+.bi-bookmark-fill {
+    display: none;
+}
+.bi-bookmark-fill.active {
+    display: block;
+}
+
+/* 간격 */
+.best,
+.recommend {
+    margin-top: 5vh;
+}
+
+section {
+    margin-bottom: 7vh;
+}
+
+.best h3,
+.watch h3,
+.bookmark h3,
+.vid h3 {
+    margin-bottom: 3vh;
+}
+
+
+
+/* 지금 많이 보고있는 메뉴 */
+.glue {
+    display: flex;
+    margin-bottom: 2vh;
+    font-size: 110%;
+}
+.glue .rank {
+    margin-right: 3vw;
+}
+.glue .rank p {
+    font-size: 110%;
+    font-weight: 800; 
+    color: #907761;
+}
+
+
+/* 회전 */
+.glue.no1 {
+    animation: no1 1s linear 1s;
+}
+.glue.no2 {
+    animation: no2 1s linear 1.4s;
+}
+.glue.no3 {
+    animation: no3 1s linear 1.8s;
+}
+.glue.no4 {
+    animation: no4 1s linear 2.2s;
+}
+.glue.no5 {
+    animation: no5 1s linear 2.6s;
+}
+.glue.no6 {
+    animation: no6 1s linear 3s;
+}
+
+@keyframes no1 {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes no1 {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes no2 {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes no3 {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes no4 {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes no5 {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes no6 {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+
+/* 최근에 저장한 메뉴 */
+.bookmarkBox {
+    overflow: hidden;
+    /* flex-direction: row-reverse; */
+}
+.bookmarkBox .inactive {
+    display: none;
+}
+
+
+
+/* 이달의 레시피 */
+.recommend .recTab {
+    display: flex;
+    margin-bottom: 2vh;
+}
+.recommend .recTab div {
+    margin-right: 3vw;
+    cursor: pointer;
+    font-weight: 500;
+}
+.recommend .recTab .kFood.active,
+.recommend .recTab .wFood.active,
+.recommend .recTab .cFood.active,
+.recommend .recTab .jFood.active{
+    color: #907761;
+}
+
+.recommend .korean,
+.recommend .western,
+.recommend .china,
+.recommend .japan {
+    display: none;
+}
+.recommend .korean.active,
+.recommend .western.active,
+.recommend .china.active,
+.recommend .japan.active {
+    display: flex;
+}
+
+/* .recommend .western {
+    display: none;
+} */
+/* .recommend .western.active {
+    display: flex;
+} */
+
+/* .recommend .china {
+    display: none;
+} */
+/* .recommend .china.active {
+    display: flex;
+} */
+
+/* .recommend .japan {
+    display: none;
+} */
+/* .recommend .japan.active {
+    display: flex;
+} */
+
+/* 동영상 캐러셀 */
+@media (max-width: 767px) {
+    .four .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .four .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.four .carousel-inner .carousel-item.active,
+.four .carousel-inner .carousel-item-next,
+.four .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+
+/* .vid .card {
+    position: relative;
+} */
+
+/* .vid .card-img {
+    
+    width: 50%;
+} */
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .four .carousel-inner .carousel-item-end.active,
+    .four .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .four .carousel-inner .carousel-item-start.active,
+    .four .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.four .carousel-inner .carousel-item-end,
+.four .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+}
+
+
+/* 동영상 제외 미디어쿼리 */
+@media screen and (max-width: 576px) {
+    .recommend .bi,
+    .bookmark .bi {
+        font-size: 120%;
+        right: 30%;
+    }
+
+    .watch p, .recommend p{
+        font-size: 80%;
+    }
+    .recTab {
+        font-size: 90%;
+    }
+
+    h3 {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .recommend .bi,
+    .bookmark .bi {
+        font-size: 120%;
+        right: 50%;
+    }
+}

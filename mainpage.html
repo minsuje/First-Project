@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./mainpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <main>
+        <div class="container border">
+            <!-- top carousel -->
+            <section>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 베스트 레시피 -->
+            <section class="best">
+                <div class="bestFour">
+                    <h2 class="font-weight-light">베스트 레시피</h2>
+                    <div class="row justify-content-center">
+                        <!-- <div class="col-md-4"> -->
+                        <div class="bCard-1 card col">
+                            <div class="card-img">
+                                <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                                <!-- <div class="card-img-overlay">
+                                    <i class="bi bi-bookmark fs-2"></i>
+                                    <i class="bi bi-bookmark-fill fs-2"></i>
+                                </div> -->
+                                <div class="card-body text-center">
+                                    <p>🥇 베스트레시피이름1</p>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay">
+                                <i class="bi bi-bookmark fs-2"></i>
+                                <i class="bi bi-bookmark-fill fs-2"></i>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="col"> -->
+                        <div class="bCard-2 card col">
+                            <div class="card-img">
+                                <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                                <div class="card-body text-center">
+                                    <p>🥈 베스트레시피이름2</p>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay">
+                                <i class="bi bi-bookmark fs-2"></i>
+                                <i class="bi bi-bookmark-fill fs-2"></i>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="col-md-4"> -->
+                        <div class="bCard-3 card col">
+                            <div class="card-img">
+                                <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                                <div class="card-body text-center">
+                                    <p>🥉 베스트레시피이름3</p>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay">
+                                <i class="bi bi-bookmark fs-2"></i>
+                                <i class="bi bi-bookmark-fill fs-2"></i>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"><i class="bi bi-bookmark"></i>Slide 1
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 지금 많이 검색하는 메뉴 -->
+            <section class="watch">
+                <div class="wathchRank">
+                    <h2 class="font-weight-light">지금 많이 검색하는 메뉴</h2>
+                    <div class="row justify-content-center text-center">
+                        <div class="no1 col-md-6">
+                            <div class="glue no1">
+                                <div class="col-md-2">1</div>
+                                <div class="col-md-4">메뉴이름</div>
+                            </div>
+                            <div class="glue no2">
+                                <div class="col-md-2">2</div>
+                                <div class="col-md-4">메뉴이름</div>
+                            </div>
+                            <div class="glue no3">
+                                <div class="col-md-2">3</div>
+                                <div class="col-md-4">메뉴이름</div>
+                            </div>
+                        </div>
+                        <div class="no2 col-md-6">
+                            <div class="glue no4">
+                                <div class="col-md-2">4</div>
+                                <div class="col-md-4">메뉴이름</div>
+                            </div>
+                            <div class="glue no5">
+                                <div class="col-md-2">5</div>
+                                <div class="col-md-4">메뉴이름</div>
+                            </div>
+                            <div class="glue no6">
+                                <div class="col-md-2">6</div>
+                                <div class="col-md-4">메뉴이름</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 최근에 저장한 레시피 -->
+            <section class="bookmark">
+                <div class="recentBookmark">
+                    <h2>최근에 저장한 레시피</h2>
+                    <div class="bookmarkBox row">
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- 이달의 레시피 -->
+            <section class="recommend">
+                <h2>이달의 레시피</h2>
+                <nav>
+                    <div>한식</div>
+                    <div>양식</div>
+                    <div>중식</div>
+                    <div>일식</div>
+                </nav>
+                <div class="row justify-content-center">
+                    <!-- <div class="col-md-4"> -->
+                    <div class="kCard-1 card col-md-3">
+                        <div class="card-img">
+                            <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>한식레시피이름1</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark fs-3"></i>
+                            <i class="bi bi-bookmark-fill fs-3"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-4"> -->
+                    <div class="kCard-2 card col-md-3">
+                        <div class="card-img">
+                            <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>한식레시피이름2</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark fs-3"></i>
+                            <i class="bi bi-bookmark-fill fs-3"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-4"> -->
+                    <div class="kCard-3 card col-md-3">
+                        <div class="card-img">
+                            <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>한식레시피이름3</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark fs-3"></i>
+                            <i class="bi bi-bookmark-fill fs-3"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-3"> -->
+                    <div class="kCard-4 card col-md-3">
+                        <div class="card-img">
+                            <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                            <div class="card-body text-center">
+                                <p>한식레시피이름4</p>
+                            </div>
+                        </div>
+                        <div class="card-img-overlay">
+                            <i class="bi bi-bookmark fs-3"></i>
+                            <i class="bi bi-bookmark-fill fs-3"></i>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+            </section>
+
+            <!-- 동영상 -->
+            <section class="vid">
+                <div class="four">
+                    <h2 class="font-weight-light">동영상으로 보는 레시피</h2>
+                    <div class="row justify-content-center">
+                        <div id="recipeCarousel" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay"></i>Slide 1
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="//via.placeholder.com/500x400/e66?text=2" class="img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay">Slide 2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="//via.placeholder.com/500x400/7d2?text=3" class="img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay">Slide 3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="//via.placeholder.com/500x400?text=4" class="img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay">Slide 4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="//via.placeholder.com/500x400/aba?text=5" class="img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay">Slide 5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="//via.placeholder.com/500x400/fc0?text=6" class="img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay">Slide 6</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </a>
+                            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <h5 class="mt-2 fw-light">advances one slide at a time</h5> -->
+                </div>
+            </section>
+
+    </main>
+    <script src="./mainpage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+.profile {
+    margin: 0 100px 0 100px;
+    height: 220px;
+    /* padding: 20px; */
+    background-color: rgb(245, 212, 189);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid black;
+    border-radius: 20px;
+}
+
+.profileImg{
+    border-radius: 50%;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    background-size:contain;
+    background-position: center;
+    margin-right: 100px;
+}
+#previewImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+#previewImg:hover{
+    cursor: pointer;
+}
+
+.idBox{
+    display: flex;
+    align-items: center;
+
+}
+
+.nameAndLike strong {
+    font-size: 40px;    
+    color: white;
+}
+
+.like {
+    display: flex;
+}
+
+.good:hover{
+    cursor: pointer;
+}
+
+.logout button{
+    /* display: inline-block; */
+    border-radius: 15px;
+    margin: 40px 0px 0px 10px;
+
+}
+
+.logout a {
+    text-decoration: none;
+    color: black;
+    /* background-color: black; */
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.profile>.profileImg {
+    right: 200px;
+}
+
+
+/* 슬라이드 작성한 레시피*/
+.post {
+    height: 400px;
+}
+.post a {
+    text-decoration: none; /* a태그에 밑 줄을 없애기 위해서 */
+    color: black;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+span{
+    font-size: 20px;
+    font-weight: 600px;
+}
+
+/* 글 상자 */
+.PostWr{
+    margin-bottom: 30px;
+}
+
+/* 그림 상자 */
+.newSlidesBox{
+    position: relative;
+    display: flex; /* 일자로 놓기 위해 */
+    /* margin: auto; */
+    justify-content: space-around;
+    align-items: center; /* 중앙 정렬 */
+}
+
+/* 그림 상자의 자식 상자1 */
+.newSlidesContainer{
+    width: 870px;
+    overflow: hidden;
+}
+
+/* 그림 상자에 자식 상자1에 자식 상자 */
+.newSlidesBox .newSlides{
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 0px;
+    width: 1200000px; /* width를 크기 주어서 버튼을 넘기면 width 상자가 이동하게 만들고 싶다.*/
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 10px 0px; */
+}
+
+.newSlidesBox .newSlides img{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    padding: 10px;
+    width: 210px;
+    height: 210px;
+    position: relative;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+}
+
+/* 베스트 레시피 */
+
+.bestSlidesBox{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.bestSlidesContainer{
+    width: 870px;
+    overflow: hidden;
+}
+
+.bestSlidesBox .bestSlides{
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 0px;
+    width: 1200000px; 
+}
+
+.bestSlidesBox .bestSlides img{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    padding: 10px;
+    width: 210px;
+    height: 210px;
+    position: relative;
+}
+
+/* recent Slides */
+
+/* 자식 상자 2 */
+.recentSlidesBox{
+    position: relative;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.recentSlidesContainer{
+    width: 870px;
+    overflow: hidden;
+}
+
+.recentSlidesBox .recentSlides{
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    width: 1200000px; 
+}
+
+.recentSlidesBox .recentSlides img{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    padding: 10px;
+    width: 210px;
+    height: 210px;
+    position: relative;
+}
+
+#all{
+    margin-top: 100px;
+}
+
+
+/*  프로필과 그 밑 내용 구분 선 */
+.hr {
+    width: 10px;
+    height: 10px;
+    margin: 20px 0px;
+    background-color: rgb(108,36,22,.7);
+    border-radius: 10px;
+}
+
+/* 구글 폰트 */
+*{
+    font-family: 'Gugi', sans-serif;
+    font-family: 'Nanum Brush Script', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #64220B;
+}
+
+img:hover{
+    cursor: pointer;
+    bottom: 2vh;
+}
+
+@media screen and (max-width : 576px) {
+    .profileImg{
+        margin-right: 0px;
+    }
+    #previewImg{
+        width: 150px;
+        height: 150px;
+        margin-top: 25px;
+    }
+    .logout button{
+        margin: auto;
+    }
+    .idBox{
+        display: block;
+    }
+    .PostWr{
+        text-align: center;
+    }
+}
+
+
+
+img{
+    border-radius: 20px;
+}

@@ -1,0 +1,9 @@
+@media print {
+    header{display: none;}
+    footer{display: none;}
+    .detailHead .dh_imgs{display: none;}
+    .detailHead .dh_smr .shares{display: none;}
+    .detailHead .dh_smr .recipe_info{display: none;}
+    .detailBody .sticky-top{display: none;}
+    .detailFoot{display: none;}
+}

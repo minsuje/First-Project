@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #64220b;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+input,
+textarea,
+button {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-body a {
+  text-decoration: none;
+  color: rgb(104, 45, 9) !important;
+}
+
+input,
+textarea {
+  background-color: rgb(246, 251, 255);
+  border-radius: 4px;
+  border: 1px solid rgba(56, 56, 56, 0.3);
+  padding: 0.5rem;
+  outline: none;
+  resize: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+article {
+  margin-bottom: 3rem;
+}
+
+main {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+.food-slide-title {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+footer a {
+  color: rgb(200, 115, 15);
+  text-decoration: none;
+}
+
+.food-slide-title h5 {
+  margin: 0;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.food-slide-title i {
+  font-size: 1.2rem;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.food-card {
+  cursor: pointer;
+}
+
+.card-title {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+
+.card-body {
+  display: none;
+  color: #361205;
+}
+
+.card-ingredient {
+  margin: 2rem;
+}
+
+.all-lists-grid-container {
+  margin: 0 auto;
+  width: 75vw;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  row-gap: 2rem;
+  column-gap: 3vw;
+}
+
+.main-section .all-lists-grid-container .food-card {
+  height: 11rem;
+  border: none;
+  background-color: transparent;
+  scale: 100%;
+}
+
+.main-section .all-lists-grid-container .food-card .card-body {
+  display: block;
+  padding: 0.2rem;
+  position: relative;
+}
+
+.main-section .all-lists-grid-container .food-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 85%;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.main-section .all-lists-grid-container .food-card .card-title {
+  font-size: 1rem;
+}
+.main-section .all-lists-grid-container .bi-arrow-right {
+  position: absolute;
+  right: 6px;
+}
+
+.main-section .all-lists-grid-container .food-card .card-ingredient,
+.main-section .all-lists-grid-container .food-card .card-text {
+  display: none;
+}
+
+.modal-card,
+.add-modal-card {
+  position: fixed;
+  width: 60vw;
+  height: 90vh;
+  top: 50%;
+  left: 50%;
+  z-index: 6;
+  transform: translate(-50%, -50%);
+}
+
+.add-modal-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  display: none;
+}
+
+.add-modal-card * {
+  display: block;
+  width: 100%;
+  color: #64220b;
+}
+
+.add-modal-card button {
+  color: #64220b;
+  padding: 0;
+}
+
+.add-modal-card label {
+  margin-bottom: 0.5rem;
+}
+
+.add-modal-card textarea {
+  height: 40%;
+}
+
+.modal-card .card-img-top {
+  height: 50%;
+  object-fit: cover;
+}
+
+.likes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-list {
+  display: none;
+  position: absolute;
+  top: 10rem;
+  right: 20px;
+  z-index: 2;
+  background-color: rgba(148, 67, 15, 0.6);
+  border-radius: 8px;
+}
+
+.container-of-like {
+  z-index: 2;
+}
+
+.curtain {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(71, 71, 71, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
+.blue {
+  color: rgb(148, 67, 15);
+  font-weight: bold;
+}
+
+.order1 {
+  order: -2;
+}
+
+@media screen and (max-width: 1024px) {
+  .all-lists-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .all-lists-grid-container {
+    width: 80vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-card {
+    width: 70vw;
+    overflow: auto;
+  }
+
+  .like-list {
+    position: fixed;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .all-lists-grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .modal-card {
+    width: 80vw;
+  }
+}

@@ -1,0 +1,199 @@
+.profile {
+    margin: 0 100px 0 100px;
+    height: 220px;
+    background-color: rgb(245, 212, 189);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid black;
+    border-radius: 20px;
+}
+
+.profile>div>a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+img:hover{
+    cursor: pointer;
+    bottom: 2vh;
+}
+
+
+.profile>.profileImg {
+    width: 200px;
+    height: 200px;
+    margin-right: 100px;
+}
+#previewImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.hr {
+    width: 10px;
+    height: 10px;
+    margin: 20px 0px;
+    background-color: rgb(108,36,22,.7);
+    border-radius: 10px;
+}
+
+/* 부모 상자 */
+.post {
+    height: 400px;
+}
+.post a {
+    text-decoration: none; /* a태그에 밑 줄을 없애기 위해서 */
+    color: black;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+/* 글 상자 */
+.PostWr{
+    margin-bottom: 30px;
+}
+
+/* 그림 상자 */
+.bestSlidesBox{
+    position: relative;
+    display: flex; /* 일자로 놓기 위해 */
+    /* margin: auto; */
+    justify-content: space-around;
+    align-items: center; /* 중앙 정렬 */
+}
+
+/* 그림 상자의 자식 상자1 */
+.bestSlidesContainer{
+    width: 870px;
+    overflow: hidden;
+}
+
+/* 그림 상자에 자식 상자1에 자식 상자 */
+.bestSlidesBox .bestSlides{
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 0px;
+    width: 120000px; /* width를 크기 주어서 버튼을 넘기면 width 상자가 이동하게 만들고 싶다.*/
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 10px 0px; */
+}
+
+.bestSlidesBox .bestSlides img{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    padding: 10px;
+    width: 210px;
+    height: 210px;
+    position: relative;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+}
+
+/* recent Slides */
+
+/* 자식 상자 2 */
+.recentSlidesBox{
+    position: relative;
+    display: flex; /* 일자로 놓기 위해 */
+    /* margin: auto; */
+    justify-content: space-around;
+    align-items: center; /* 중앙 정렬 */
+}
+
+/* 자식 상자2에 자식 상자1 */
+.recentSlidesContainer{
+    width: 870px;
+    overflow: hidden;
+}
+
+/* 자식 상자2에 자식 상자1에 자식상자*/
+.recentSlidesBox .recentSlides{
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    width: 1200000px; /* width를 크기 주어서 버튼을 넘기면 width 상자가 이동하게 만들고 싶다.*/
+}
+
+.recentSlidesBox .recentSlides img{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    padding: 10px;
+    width: 210px;
+    height: 210px;
+    position: relative;
+}
+
+
+
+#all{
+    margin-top: 100px;
+}
+
+.loginname{
+    font-size: 30px;
+}
+.loginname:hover{
+    cursor: pointer;
+}
+
+.request > p{
+    font-size:140%;
+    font-weight: 700;
+}
+.request div  {
+    color : grey
+}
+.request div a{
+    text-decoration: none;
+    color : grey;
+    font-family: 'Gugi', sans-serif;
+    font-family: 'Nanum Brush Script', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+}
+
+*{
+    font-family: 'Gugi', sans-serif;
+    font-family: 'Nanum Brush Script', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #64220B;
+}
+
+@media screen and (max-width: 768px) {
+    .profileImg{
+        margin-right: 0px;
+    }
+    .PostWr{
+        text-align: center;
+    }
+    #previewImg{
+        width: 150px;
+        height: 150px;
+        margin-top: 25px;
+    }
+    .profile>.profileImg{
+        margin-right: 0px;
+    }
+    .loginname {
+        font-size: 20px;
+    }
+}
+img{
+    border-radius: 20px;
+}

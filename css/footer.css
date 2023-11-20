@@ -1,0 +1,14 @@
+footer a {
+    color: rgb(200, 115, 15);
+    text-decoration: none;
+}
+
+footer .container{border-top: 1px solid var(--d-line);}
+footer .container.info{display: flex;flex-wrap:wrap;justify-content: end;gap:10px;padding-bottom: 0 !important;color: var(--d-note);}
+footer .container.info p{margin: 0;display: flex;flex-wrap:wrap;gap:10px}
+footer .container a{display: inline-flex;padding: 5px 10px;border-radius: 10px;border: 1px solid var(--d-line); align-items: center;white-space: nowrap;}
+footer .container a i{margin-right: 5px;}
+@media screen and (min-width:576px) {
+    footer .container.info p{margin: 0;display: flex;flex-wrap:wrap;}
+}
+footer .container~.container{border-top-style: dotted;border-top-width: 0;}

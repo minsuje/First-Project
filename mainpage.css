@@ -1,0 +1,121 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.best h2, .watch h2, .recommend h2, .vid h2 {
+    margin-bottom: 3vh;
+}
+/* h2 {
+    margin-bottom: 3vh;
+} */
+
+.card {
+    border: none;
+    /* cursor: pointer; */
+}
+
+/* card hover */
+.best .card {
+    transition-property: bottom;
+    /* transition-duration: 1000s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 10s; */
+}
+.best .card:hover {
+    bottom: 2vh;
+}
+/* .bookmark .card-img {
+    margin-top: 2vh;
+} */
+.bookmark .card:hover {
+    bottom: 2vh;
+}
+.recommend .card:hover {
+    bottom: 2vh;
+}
+
+/* 북마크 아이콘 */
+.bi {
+    position: absolute;
+    right: 10%;
+    /* margin-right: 10%; */
+    color: burlywood;
+}
+
+.bi-bookmark-fill {
+    display: none;
+}
+
+.bi-bookmark-fill.active {
+    display: block;
+}
+
+/* 지금 많이 보고있는 메뉴 */
+.glue {
+    display: flex;
+    /* 회전보기 위한 임시 배경색 */
+    background-color: burlywood;
+    border: 1px solid black;
+    transition: transform 1s;
+}
+
+/* 회전 */
+.glue:hover {
+    transform: rotateX(360deg);
+}
+
+
+/* 최근에 저장한 메뉴 */
+.bookmarkBox {
+    overflow: hidden;
+    /* flex-direction: row-reverse; */
+    
+}
+
+
+/* 이달의 레시피 */
+.recommend nav {
+    display: flex;
+}
+
+
+/* 동영상 캐러셀 */
+@media (max-width: 767px) {
+    .four .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .four .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.four .carousel-inner .carousel-item.active,
+.four .carousel-inner .carousel-item-next,
+.four .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .four .carousel-inner .carousel-item-end.active,
+    .four .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .four .carousel-inner .carousel-item-start.active,
+    .four .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.four .carousel-inner .carousel-item-end,
+.four .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+}
+
+
+
+
+

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+      integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/listsStyle.css" />
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <script src="/js/loginLogic.js" defer></script>
+    <script src="/js/header.js" defer></script>
+    <script src="/js/listsAll.js" defer></script>
+    <title>우아한 레시피</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation">
+          <div class="logoImg"><a href="./index.html"><img src="/imgs/logo.png" alt="image-of-logo" class="logo"></a></div>
+          <ul class="menu">
+              <li><a href="./list1.html">한식</a></li>
+              <li><a href="./list1.html?cate=1">양식</a></li>
+              <li><a href="./list1.html?cate=2">중식</a></li>
+              <li><a href="./list1.html?cate=3">일식</a></li>
+              <li class="myPageshort"> <a href="./myPage.html" class="my-real-page">마이페이지</a></li>
+          </ul>
+          <div class="icon">
+              <div class="search"><i class="bi bi-search" style="font-size: 1.2rem;"></i>
+              </div>
+              <div class="login login-text" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인 
+              </div>
+              <div class="more"><i class="bi bi-justify" style="font-size: 1.2rem;"></i></div>
+          </div>
+      </nav>
+      <div class="searchBox">
+          <div class="back">back</div>
+          <div class="searchWrap">
+              <input type="text" class="search-input" placeholder="궁금했던 레시피를 검색해보세요!">
+              <button type="button" class="search-btn" >검색버튼</button>
+          </div>
+      </div>
+
+       <!-- bootstrap Modal simple ver.-->
+  <!-- Modal -->
+
+  </header>
+
+  <aside>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-3">
+                          <label for="id" class="col-form-label">아이디</label>
+                          <input type="text" class="form-control login-id" id="id">
+                      </div>
+                      <div class="mb-3">
+                          <label for="password" class="col-form-label">비밀번호</label>
+                          <input type="text" class="form-control login-pw" id="password">
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                <form>
+                  <button type="button" class="btn btn-primary login-button">Sign in</button>
+                </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  </aside>
+
+ 
+    <main>
+        <section class="main-section">
+          <div class="food-slide-title">
+            <h5> 한식 레시피 </h5> 
+            <div>
+                <button class="container-of-like"><i class="bi bi-hand-thumbs-up"></i></button>
+                <button type="button" class="button add-card-btn"  data-countryindex="1"><i class="bi bi-pencil-square" style="color:  rgb(148,67,15);"></i></button> 
+            </div>
+                
+        </div>
+        <article class="all-lists-grid-container">
+                <div class="card food-card card-group1" data-mylike="0" data-index="0" data-numberoflikes="4300">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2018/04/07/03/21/food-3297633_1280.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">계란찜<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 계란 3개, 설탕 1/3스푼,통깨, 물 100ml, 소금 1/3스푼, 대파, 참기름 1스푼</p>
+                    <p class="card-text">1. 작은 뚝배기에 계란 3개를 깨뜨려 넣은 뒤 거품기로 계란을 풀어줍니다
+2. 설탕 1/3 큰 술, 소금 1/3 큰 술을 넣고 한 번 더 거품기로 잘 섞어주기!
+3. 그리고 나서 물 100ml를 넣어주고 또 한 번 거품기로 섞어줍니다.
+4. 중불에 계란이 몽글몽글 익을 때까지 젓가락으로 저어줍니다.
+5. 쪽파를 넣고 뚜껑을 닫고 4-5분가량 익혀줍니다.
+6. 완성!
+                    </p>
+                  </div>
+                </div>
+ 
+                  <div class="card food-card card-group1" data-mylike="0" data-index="1"  data-numberoflikes="3124">
+                    <img
+                      src="https://cdn.pixabay.com/photo/2019/09/05/01/08/food-4452839_1280.jpg"
+                      class="card-img-top"
+                      alt="image-of-food"
+                    />
+  
+                    <div class="card-body">
+                        <a href="./detail.html" class="card-title">제육볶음<i class="bi bi-arrow-right"></i></a>
+                      <p class="card-ingredient">준비재료 : 돼지고기 1근, 양파 1개, 청양고추 2개, 대파 1뿌리, 설탕, 고추장, 간장, 고춧가루 2스푼, 다진마늘, 굴소스, 올리고당 1스푼
+                      </p>
+                      <p class="card-text">1. 고추장 2스푼, 간장 2스푼. 고춧가루 2스푼, 다진마늘 1스푼, 굴소스 1스푼, 올리고당 1스푼 넣어서
+양념장을 이렇게 만들어주세요
+2. 고기가 익어갈때 설탕을 넣고 더 구워줍니다.
+3. 손질해둔 야채와 양념장을 넣고 볶아주세요
+4. 모든 재료가 다 익으면 제육볶음 끝!
+
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card food-card card-group1" data-mylike="0" data-index="2" data-numberoflikes="1985" >
+                    <img
+                      src="https://cdn.pixabay.com/photo/2020/01/21/03/11/korean-food-4781973_640.jpg"
+                      class="card-img-top"
+                      alt="image-of-food"
+                    />
+  
+                    <div class="card-body">
+                        <a href="./detail.html" class="card-title">갈치조림<i class="bi bi-arrow-right"></i></a>
+                      <p class="card-ingredient">준비재료 : 갈치, 무, 양파, 청양고추, 대파, 다시마, 간장, 설탕, 물엿, 고춧가루, 다진마늘, 다진생강, 맛술, 후추
+                      </p>
+                      <p class="card-text">1. 육수는 무 넙적하게 썰어주고, 다시마 4~5장, 무가 잠길정도의 물로 끓여줍니다. 끓기시작하면 다시마는 빼주세요.
+2. 남대문표양념장 : 간장8, 설탕1, 물엿1, 고추가루3, 다진마늘1, 다진생강 약간, 여기에 맛술2, 후추조금 더 추가했네요.
+3. 갈치는 내장과 비늘을 깨끗하게 손질하여 물기를 빼줍니다.
+4. 끓어오른 육수에 바로 갈치올리고, 양념장 두둑하게 올려줍니다.
+5. 양파,청양고추,대파까지 올리고, 뚜껑닫고 한소끔 끓입니다.
+6. 완성!
+                      </p>
+                    </div>
+                  </div>
+
+
+    
+
+                <div class="card food-card card-group1" data-mylike="0" data-index="3"  data-numberoflikes="315" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2022/07/12/ff543d36f8d9765ca4d53fc63941f0851.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">마늘 통삼겹 구이<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 삼겹살 500g, 고추 100g, 청주 1Ts, 소금, 후추 약간, 전분 1/2 종이컵, 다진마늘 6Ts, 꿀 4Ts, 레몬즙 1Ts, 식용유, 소금 약간</p>
+                    <p class="card-text">1. 삼겹살에 칼집을 깊게 넣고 소금, 후추, 청주로 밑간한다.
+2. 꽈리고추는 물에 씻은 후 전분을 묻힌다.
+3. 삼겹살에 전분을 묻혀 에어프라이어에 넣고 180℃에서 15분 굽는다.
+4. 삼겹살은 뒤집고 꽈리고추도 함께 넣어 180℃에서 15분 굽는다.
+5. 팬에 기름을 두르고 약불에서 다진마늘을 볶다가 불을 끄고 꿀, 레몬즙, 소금을 넣고 섞는다.
+6. 삼겹살과 꽈리고추를 그릇에 담고 마늘소스를 올린다.
+7. 완성!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card food-card card-group2" data-mylike="0" data-index="4"  data-numberoflikes="153" >
+                  <img
+                    src= 'https://recipe1.ezmember.co.kr/cache/recipe/2021/08/09/24b85da64bc678c4cee2122611a667841.jpg'
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">가지 스테이크<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 가지 1개, 설탕 1.5Ts, 다진마늘 1/2Ts, 간장 2Ts, 식초 1Ts, 버터 2Ts</p>
+                    <p class="card-text">1. 가지의 꼭지 부분은 자르고 통으로 두께 1~2cm 크기로 자른다.
+2. 자른 가지는 그릇에 담아 전자레인지에 4~5분 정도 돌린다.
+3. 간장, 설탕, 식초, 다진 마늘을 넣고 양념을 만든다.
+4. 팬에 버터를 넣고 가지를 약불에서 앞뒤로 굽는다.
+5. 가지의 수분이 빠지고 노릇해지면 양념을 바른다.
+6. 양념을 바른 가지는 약불에서 앞뒤로 굽는다.
+7. 완성!
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="card food-card card-group2" data-mylike="0" data-index="5" data-numberoflikes="315" >
+                  <img
+                    src="https://cdn.pixabay.com/photo/2017/09/10/14/23/toppokki-2735719_640.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">떡볶이<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 베이컨, 대파, 떡, 간장, 참기름, 물엿, 기름</p>
+                    <p class="card-text">1. 대파에 떡과 베이컨을 기름을 두르고 볶는다.
+2. 간장, 참기름 한스푼, 물엿 적당히 넣고 볶는다.
+3. 깨를 뿌리고 플레이팅을 한다.
+4. 완성!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card food-card card-group2" data-mylike="0" data-index="6" data-numberoflikes="33"  >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2023/11/13/ee1a4dabe8592303cc353e3d71ded67f1.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">숙주나물 무침<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 숙주 300g, 쪽파 10가닥, 죽염 1/2Ts, 참치액 1/2스푼, 참기름 1스푼, 깨소금 1큰술, 통깨 1/2큰술</p>
+                    <p class="card-text">1. 숙주는 찬물에 2~3번 깨끗이 씻어 껍질과 불순물을 제거한 후 물기를 빼 줍니다.
+2. 고명으로 들어 갈 쪽파는 1CM 정도 크기로 쫑쫑 썰어 줍니다.
+3. 끓는 물에 숙주를 넣고 뒤적여 1~2분 정도 있다가 건져서 체에 밭쳐 한 김 식힌다 -아삭한 식감을 위해 오래 데치지 않고 살짝만 데쳐 줍니다.
+4. 참치액 1/2큰술과 죽염 1/2작은술 로 간을 합니다.
+5. 썰어놓은 쪽파를 넣고 참기름 1큰술과 깨소금 1큰술, 통깨 1/2큰술을 넣고 간이 배게 살살 무쳐 줍니다.
+6. 완성!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card food-card card-group2" data-mylike="0" data-index="7" data-numberoflikes="342" >
+                  <img
+                    src="https://cdn.pixabay.com/photo/2017/02/19/21/02/food-2080896_640.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">고기 감자조림<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 감자 2개, 고기 200g, 진간장 4스푼, 설탕 4스푼, 후추 조금, 올리고당 1스푼, 다진마늘 1스푼, 물 120ml</p>
+                    <p class="card-text">1. 감자는 깍뚝 썰어 2분 데친다.
+2. 스팸은 깍둑 썰어 팬에 노릇하게 구워준다.
+3. 삶은 감자,다진마늘1스푼을 넣어 살짝 볶는다.
+4. 물120ml,진간장4스푼,설탕 4스푼,후추 조금을 넣고 뚜껑을 닫아 2분 끓여준다.
+5. 국물이 줄때까지 졸이다가 올리고당 1스푼을 넣고 잘 섞어 마저 졸여준다.
+6. 완성!
+                    </p>
+                  </div>
+                </div>
+
+
+
+        
+
+                <div class="card food-card card-group3" data-mylike="0" data-index="8" data-numberoflikes="342" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2016/04/08/8448b043b2e1eb6cb55041b0bffb1a281.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body" >
+                    <a href="./detail.html" class="card-title">참치 퀘사디아<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 또띠아 2장, 참치캔 1개, 치즈, 양파 0.5개, 청양고추 1개, 토마토소스 4스푼</p>
+                    <p class="card-text">1. 또띠아 한쪽면에 토마토소스를 2T덜어 바르고 캔참치의 기름기를 최소화하여 올려줍니다
+2. 그 위로 양파, 햄, 청양고추를 올려 줍니다.
+3. 다른 또띠아의 한면에도 토마토소스를 2T 발라줍니다
+4. 기존에 재료쌓아올린 또띠아에 치즈를 듬뿍올리고 덮어줍니다,
+5. 그 상태로 전자레인지에 2분간 돌려줍니다.
+6. 완성!
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="card food-card card-group3" data-mylike="0" data-index="9" data-numberoflikes="240" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2018/09/19/82747f5d992649fbab050d16a99389cf1.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">마약계란<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 훈제 달걀 10알 양조간장, 물 100ml, 맛술 1큰술, 청고추, 홍고추 1개, 다진마늘 1큰술, 양파 1/4개</p>
+                    <p class="card-text">1. 계란 껍질을 까줍니다.
+2. 간장+물+올리고당 섞은 후 청고추,홍고추 다져서 넣고!
+3. 다진 양파 넣고, 다진 마늘 넣고,
+4. 다진 파 넣고, 통 깨 넣고 바닥에 씻은 다시마 한 조각 넣었다가 한 시간 뒤 간장이 끈적끈적해집니다.
+5. 마지막으로 달걀10알을 넣어주면 끝!!
+6. 완성!
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="card food-card card-group3" data-mylike="0" data-index="10" data-numberoflikes="210" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2019/08/01/ccc38222338c8673dc9588c610303a811.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">크래미 유부초밥<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 크래미 4개, 허니머스터드 1스푼, 밥 2/3공기, 마요네즈 3.5스푼, 유부초밥 1봉지, 후추 약간, 양파 1/4개</p>
+                    <p class="card-text">1. 양파는 잘게 다진 뒤 찬물에 5분간 담가 건져요.
+2. 크래미를 결대로 찢은 후 양파, 양념 재료를 넣고 섞어요.
+3. 밥에 유부초밥 후리가케와 배합초를 넣고 섞어요.
+4. 유부는 물기를 짠 후 밥을 2/3정도 채워 주고 양념한 크래미를 올려 완성해요.
+5. 완성!
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="card food-card card-group3" data-mylike="0" data-index="11" data-numberoflikes="95" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2022/08/10/f5e0b95c2ca77f31083a04c21ff50a741.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">명란 유부초밥<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 조림유부 8장, 밥 2공기, 맛술 1/2스푼, 와사비, 명란젓 3덩이, 마요네즈 2스푼, 참기름 1스푼</p>
+                    <p class="card-text">1. 명란젓은 겉껍질을 살짝 갈라 알 부분만 꺼낸다
+2. 마요네즈와 맛술을 넣고 섞는다
+3. 밥에 후레이크, 시판소스 1/2, 참기름을 넣고 섞는다
+4. 조림유부의 물기를 짠 후 밥을 2/3정도 채운다
+5. 마요네즈를 섞은 명란을 올린다.
+6. 와사비와 함께 곁들어 먹으면 완성!
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="card food-card card-group3" data-mylike="0" data-index="12" data-numberoflikes="204" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2016/03/22/34653c3f0b81699d266dcfc1418365c01.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">소고기 무국<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 무 1/3개 소고기, 대파 1개, 참기름 2스푼, 간마늘 1스푼, 국간장 4스푼, 멸치육수</p>
+                    <p class="card-text">1. 국거리용 소고기와 얇게 나박나박 썬 무를 준비해주세요. 무는 얇게 썰수록 조리시간이 줄어드니 조리시간 감안해서 썰어주세요.
+2. 참기름 2T 넣고 중불에서 소고기를 먼저 볶아주세요.
+3. 참기름 넣고 볶다가 고기가 살짝 덜 익었을 때 국간장 4T 넣고 볶아주세요. 
+4. 소고기가 맛있게 달달 볶아지면, 썰어둔 무를 넣고 볶아주세요.
+5. 미리 끓여둔 멸치육수를 조금 붓고 뚜껑을 덮어 센불로 끓여주세요. 같은 방법으로 3번 반복해서 끓여주세요
+6. 뚜껑 닫고 팔팔 끓이다보면 ! 고기에서 나오는 거무스름한 거품이 생기거든요, 거품을 제거해주세요.
+7.간마늘 1T, 대파 1개를 송송 썰어 소고기무국에 투하! 간마늘 향 강한거 싫으시면 0.5T 줄여서 넣어주세요.
+8. 완성!
+                    </p>
+                  </div>
+                </div>
+                <div class="card food-card card-group4" data-mylike="0" data-index="13"  data-numberoflikes="7" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2015/08/16/84788060b17a8792d15230d6061004f91.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">참치 오이롤 초밥<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 오이 1개, 밥 1공기, 참치 1캔, 양파 1/4개, 마요네즈 4스푼, 설탕 1스푼, 소금 1꼬집, 깨 조금</p>
+                    <p class="card-text">1. 참치캔을 따서 기름을 제거하고 그릇에 담은 다음, 숟가락으로 으깨준다.
+2. 양파 4분의 1조각도 다져서 준비한다.
+3. 으깬 참치에 양파를 넣고 분량의 양념을 넣어준다.
+4. 도마위에 오이를 펼쳐놓고 주먹밥을 만들듯 밥을 뭉쳐서 오이 너비에 맞춰 손으로 빚는다.
+5. 그리고 돌돌 말아준다.
+6. 참치샐러드를 올려준다.
+7. 완성!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card food-card card-group4" data-mylike="0" data-index="14" data-numberoflikes="153" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2023/10/24/020a00db7248f0b14d185a4bcd64605a1.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">계란말이<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 계란 5개. 청양고추 1개, 홍고추 1/2개, 소금 두꼬집, 치킨스톡 1/3스푼, 식용유 1스푼</p>
+                    <p class="card-text">1. 먼저 노른자와 흰자를 분리해 줍니다.
+2. 청양고추와 홍고추를 잘게 다져주고, 분리한 흰자에 섞어주세요. 노른자는 소금 두 꼬집으로, 흰자는 치킨스톡 1/3 큰 술로 밑간을 합니다.
+3. 프라이팬을 중약불로 예열하고 식용유 1 큰 술을 둘러주세요. 흰자를 먼저 부어부고, 계란을 말아줍니다.
+4. 흰자를 다 말았다면, 이제 노른자를 부어서 동일한 방법으로 말아주세요.
+5. 완성 된 계란말이를 프라이팬에서 꺼내 2~3분 정도 식혀주고 잘라줍니다.
+6. 완성!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card food-card card-group4" data-mylike="0" data-index="15" data-numberoflikes="673" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2018/12/15/256905647e828147814a7b86064b00641.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">토마토 샤브 샐러드<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 토마토 3개, 소고기 300g, 양파 3개, 꽈리고추 20개, 간장, 올리브유, 식초 5스푼, 설탕, 통깨 2스푼</p>
+                    <p class="card-text">1. 꽈리고추는 채 썰어 씨를 빼고 물에 담궈 매운 맛이 빠지게 30분 정도 물에 담궈놓아요. 양파도 한 개를 채 썰어 30분 물에 담궈요.
+                      그 후, 체에 받쳐 물기를 빼주세요.
+2. 팬바닥에 양파 2개를 편썰어 깔아주세요.
+3. 양파 위에 소고기를 놓고 소금, 후추를 뿌려주세요. 팬의 뚜껑을 덮고 중불에서 15분 가열해요.
+4. 토마토를 썰어 동그랗게 놓고 익힌 소고기를 펴서 놓아주세요. 준비해둔 소스의 반을 고기 위에 고루 뿌리고 양파를 올려주세요.
+5. 꽈리고추까지 층층이 올려주세요. 그리고 소스를 뿌려줍니다.
+6. 완성!
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="card food-card card-group4" data-mylike="0" data-index="16" data-numberoflikes="67" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2017/06/10/9fe714aba58c3f14552d10ac7f6da13f1.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">떡갈비 볶음밥<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 떡갈비 1개,당근 약간, 다진 파 1큰술, 밥 1공기, 소금 약간, 식용유 2큰술, 피망, 양파, 김치, 굴소스 1스푼, 후추 약간</p>
+                    <p class="card-text">1. 떡갈비와 야채들은 볶기 좋은 크기로 잘라주세요.
+2. 달군 팬에 오일을 두르고 파기름을 내어주다가 잘라 논 떡갈비 넣어 노릇하게 볶아주세요.
+3. 떡갈비가 노릇하게 익어가면 나머지 야채들도 넣어서 살짝 볶아주고 소금 후추로 약간 간을 해주세요.
+4. 재료들이 어우러지게 볶아지면 준비해둔 밥을 넣어 굴 소스 1 큰 술 넣고 고슬고슬하게 볶아줍니다.
+5. 마지막 느끼함을 잡아주는 김치를 넣어 볶아주기 시작해요.
+김치는 적당하게 넣어주셔도 좋아요
+6. 완성!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card food-card card-group4" data-mylike="0" data-index="17" data-numberoflikes="3" >
+                  <img
+                    src="https://recipe1.ezmember.co.kr/cache/recipe/2015/05/27/d776a52f6fda01bb6ed1d4bdfb7821ce1.jpg"
+                    class="card-img-top"
+                    alt="image-of-food"
+                  />
+
+                  <div class="card-body">
+                    <a href="./detail.html" class="card-title">고등어 무조림<i class="bi bi-arrow-right"></i></a>
+                    <p class="card-ingredient">준비재료 : 고등어 1마리, 무 500g, 대파 1뿌리, 물 300ml, 진간장 4큰술, 고추장 2큰술, 매실액 2큰술, 맛술, 올리고당 다진마늘 1큰술, 후춧가루 약간</p>
+                    <p class="card-text">1. 무와 대파는 흐르는 물에 씻은 후 무는 도톰하게 반달 썰어 주고 대파는 어슷 썰어 줍니다.
+2. 고등어는 흐르는 물에 깨끗하게 씻어 줍니다.
+3. 분량의 양념장 재료 진간장, 고추장, 고춧가루, 매실액, 맛술, 올리고당, 다진 마늘, 후춧가루를 넣어 고루 섞어서 양념장을 만들어 줍니다.
+4. 냄비 바닥에 무를 깔고 씻어 놓은 고등어를 올린 후 대파를 얹어 주고 양념장을 끼얹어 준 다음 물을 부어 줍니다.
+5. 가스 불에 올려 센 불에서 끓여 주다가 한소끔 끓으면 불을 줄이고 간이 고루 배도록 중간 중간 양념장을 끼얹어 주면서 졸여 줍니다.
+6. 완성!
+                    </p>
+                  </div>
+                </div>
+            </article>
+      </section>
+    </main>
+    <footer>
+      <div class="container p-3 info">
+          <div class="d-flex justify-content-end align-item-center column-gap-2"> 
+              <p>
+                  <a href="../html/notice.html"> 공지사항 </a>
+                  <a href="../html/notice.html"> FAQ </a>
+              </p>
+              <p>
+                  <a href="tel:00-0000-0000"><i class="bi bi-telephone-fill"></i> 1833 - 0000</a>
+              </p>
+          </div>
+      </div>
+      <div class="container p-3">
+          <div class="d-flex justify-content-between align-item-center"> 
+              <div>
+                  <p>© 2023 빼빼로</p>
+              </div>
+              <div class="d-flex justify-content-end">
+                  우아한 레시피
+              </div>
+          </div>
+      </div>
+  </footer>
+    <div class="curtain"></div>
+    <div class="add-modal-card">
+      <label for="modal-img">이미지 첨부</label>
+      <!-- <input type="text" id="modal-img"> -->
+      <input type="file" accept="image/*" id="inputImg" onchange="previewFile()">
+      <br>
+      <label for="modal-name">메뉴 이름</label>
+      <input type="text" id="modal-name">
+      <br>
+      <label for="modal-ingredient">재료</label>
+      <input type="text" id="modal-ingredient">
+      <br>
+      <label for="modal-text">레시피</label>
+    
+      <textarea id="modal-text" ></textarea>
+      <button type="button" class="confirm-add-card-btn" style="text-align: start;">추가</button>
+    </div>
+
+
+    <div><ul class="like-list"></ul></div>
+  </body>
+</html>
