@@ -1,9 +1,5 @@
 # 우아한 레시피(Woo! Ah!)
 
-### 프로젝트 기간(Project Time)
-
-2023.11.10 ~ 2023.11.20
-
 
 ## 기술스택(Skill)
 
@@ -15,5 +11,17 @@
 
 #### Communication 
 <img src="https://img.shields.io/badge/slack-4A154B?style=for-the-badge&logo=slack&logoColor=white">
+
+## 프로젝트(Project)
+
+### 프로젝트 소개 (introduce)
+Develope Time : 2023.11.10 ~ 2023.11.20
+
+저희 프로젝트는 우아한 레시피(Woo! Ah!)로 음식 레시피 공유 사이트 입니다.
+
+저희가 처음 프로젝트 주제를 정할 때 영화, 여행, 스포츠 등 다양한 의견이 나왔었는데, 그 중 요즘 한국에 혼자 거주하는 1인 가구 층들이 많고, 
+1인 가구 층들이 주로 음식을 구매해 먹는 다는 뉴스를 떠올려 그들에게 각자만의 음식 레시피를 공유한는 음식 레시피 공유 사이트를 만들어 보자는 취지에서
+
+
 
 
